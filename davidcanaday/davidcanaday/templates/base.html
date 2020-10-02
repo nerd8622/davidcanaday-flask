@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="description" content={{ desc }}>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>.cover-img {background-image: url("/static/images/{{ imagename }}");}</style>
+    <link rel="stylesheet" href="/static/fonts.css">
+    <link rel="stylesheet" href="/static/fontawesome/css/all.min.css">
+</head>
+<body>
+    {% if image %}
+    <div class="cover-img"></div>
+    {% endif %}
+    <div class="navbar">
+        <p id="logo"><b>David Canaday</b></p>
+    <nav>
+        <a href="/" id="icon"><i class="fas fa-fw fa-home fa-lg"></i> </a>
+        <a href="/tutorials/">Tutorials</a>
+        <a href="/blog/">Blog</a>
+        <a href="/widgets/">Widgets</a>
+    </nav>
+    </div>
+
+    <h1>{{ header1 }}</h1>
+    <p>{{ text1 }}</p>
+
+    <div id="content">{% block panels %}{% endblock %}</div>
+    <div class="footer"><a href="mailto://test@gmail.com">Contact Me</a></div>
+</body></html>

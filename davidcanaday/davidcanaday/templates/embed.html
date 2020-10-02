@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% set image = False %}
+{% block panels %}
+    <style>#content{width: 100%}</style>
+    <iframe src={{ itemUrl }} frameborder="0" style="overflow:hidden;height:100vh;width:100vw"
+            height="100%" width="100%"></iframe>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block panels %}
+{% for i in range(purl|length) %}
+<div class="content-item" onclick="location.href='{{ wName }}/{{ purl[i] }}';">
+    <img src="/static/tiles{{ wName }}/{{ purl[i] }}/tile.jpg">
+    <p>{{ ptext[i] }}</p>
+    <button>View</button>
+</div>
+{% endfor %}
+{% endblock %}
